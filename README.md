@@ -36,6 +36,7 @@ A subscription-based golf charity platform where users pay to participate in sco
     ```
 
     Fill in your Supabase and Stripe credentials:
+
     ```
     VITE_SUPABASE_URL=https://your-project.supabase.co
     VITE_SUPABASE_ANON_KEY=your-anon-key
@@ -62,6 +63,7 @@ A subscription-based golf charity platform where users pay to participate in sco
     - `https://<your-project-ref>.supabase.co/functions/v1/stripe-webhook`
 
 7. Start the development server:
+
     ```bash
     cd apps/web
     npm run dev
@@ -94,6 +96,7 @@ ALLOWED_ORIGINS=http://localhost:5173,https://your-domain.com
 ```
 
 Security notes:
+
 - Configure `ALLOWED_ORIGINS` to trusted frontend origins only. Stripe checkout/portal edge functions reject untrusted origins.
 - The web app includes a Content Security Policy in `apps/web/index.html`; keep Stripe and Supabase domains in sync if you adjust integrations.
 
@@ -102,27 +105,28 @@ Security notes:
 Run migrations in order from `packages/supabase/migrations/`.
 
 1. `001_initial_schema.sql`
-Purpose: core tables, RLS policies, and profile trigger.
+   Purpose: core tables, RLS policies, and profile trigger.
 
 2. `002_winner_verification_storage.sql`
-Purpose: private `winner-verifications` storage bucket and admin-only storage policies.
+   Purpose: private `winner-verifications` storage bucket and admin-only storage policies.
 
 3. `003_avatar_storage.sql`
-Purpose: public `avatars` bucket and user-scoped avatar storage policies.
+   Purpose: public `avatars` bucket and user-scoped avatar storage policies.
 
 4. `004_email_preferences.sql`
-Purpose: profile email preference columns.
+   Purpose: profile email preference columns.
 
 5. `005_gdpr_requests.sql`
-Purpose: GDPR request tracking table and policies for user/admin workflows.
+   Purpose: GDPR request tracking table and policies for user/admin workflows.
 
 6. `006_platform_settings.sql`
-Purpose: configurable platform percentage settings used during draw execution.
+   Purpose: configurable platform percentage settings used during draw execution.
 
 7. `007_push_notifications.sql`
-Purpose: stores browser push preference (`push_results_enabled`) on profiles.
+   Purpose: stores browser push preference (`push_results_enabled`) on profiles.
 
 After running all migrations:
+
 - Confirm tables exist in `public` schema.
 - Confirm storage buckets exist (`winner-verifications`, `avatars`).
 - Confirm RLS policies are enabled.
@@ -156,6 +160,7 @@ golf-charity/
 ## Features
 
 ### User Features
+
 - **Authentication**: Email/password signup with verification
 - **Subscriptions**: Monthly ($9.99) or Yearly ($99) plans
 - **Score Management**: Submit and update 5 Stableford scores (1-45 points)
@@ -165,6 +170,7 @@ golf-charity/
 - **Account Settings**: Manage profile, subscription, and password
 
 ### Admin Features
+
 - **Dashboard**: Overview of users, subscriptions, and revenue
 - **Draw Management**: Create and execute monthly draws
 - **User Management**: View all users with subscription status
@@ -172,6 +178,7 @@ golf-charity/
 - **Charity Management**: Add/edit charity partners
 
 ### Draw System
+
 - Generates 5 unique random numbers (1-45)
 - Matches user scores against drawn numbers
 - Prize distribution: 40% (5-match) / 35% (4-match) / 25% (3-match)
@@ -190,8 +197,8 @@ See `projectstatus.md` for detailed implementation status and next steps.
 
 1. Connect your GitHub repository to Vercel
 2. Configure build settings:
-   - Build Command: `cd apps/web && npm run build`
-   - Output Directory: `apps/web/dist`
+    - Build Command: `cd apps/web && npm run build`
+    - Output Directory: `apps/web/dist`
 3. Add frontend environment variables in Vercel dashboard
 4. Deploy Edge Functions from Supabase CLI or dashboard
 5. Configure Stripe webhook endpoint to deployed `stripe-webhook` function

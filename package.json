@@ -10,7 +10,7 @@
     "clean": "powershell -Command \"if (Test-Path node_modules) { Remove-Item -Recurse -Force node_modules }; if (Test-Path apps/web/node_modules) { Remove-Item -Recurse -Force apps/web/node_modules }\""
   },
   "devDependencies": {
-    "turbo": "^2.3.0",
+    "turbo": "^2.8.20",
     "typescript": "^5.7.0"
   }
 }
