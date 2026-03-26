@@ -1,0 +1,6 @@
+import{i as t,j as e,d as c,h as l,L as s,B as a}from"./index-BuG64MAj.js";/**
+ * @license lucide-react v0.468.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const r=t("CircleX",[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"m15 9-6 6",key:"1uzhvr"}],["path",{d:"m9 9 6 6",key:"z0biqf"}]]);function i(){return e.jsx("div",{className:"min-h-[calc(100vh-200px)] flex items-center justify-center py-12 px-4",children:e.jsx(c,{className:"w-full max-w-md text-center",children:e.jsxs(l,{className:"py-8",children:[e.jsx("div",{className:"w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4",children:e.jsx(r,{className:"h-8 w-8 text-yellow-600"})}),e.jsx("h2",{className:"text-2xl font-bold text-gray-900 mb-2",children:"Subscription Cancelled"}),e.jsx("p",{className:"text-gray-600 mb-6",children:"Your payment was cancelled. No charges were made to your account."}),e.jsxs("div",{className:"space-y-3",children:[e.jsx(s,{to:"/signup",children:e.jsx(a,{className:"w-full",children:"Try Again"})}),e.jsx(s,{to:"/",children:e.jsx(a,{variant:"outline",className:"w-full",children:"Back to Home"})})]}),e.jsx("p",{className:"mt-6 text-sm text-gray-500",children:"Questions? Contact us at support@golfcharity.com"})]})})})}export{i as default};

@@ -17,8 +17,7 @@ Create this file:
 Add these values:
 
 ```bash
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key
+
 VITE_STRIPE_PUBLISHABLE_KEY=pk_test_xxx
 VITE_STRIPE_MONTHLY_PRICE_ID=price_xxx
 VITE_STRIPE_YEARLY_PRICE_ID=price_xxx
