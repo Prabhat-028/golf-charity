@@ -1,4 +1,14 @@
-./node_modules
+node_modules/
+**/node_modules/
+
+dist/
+build/
+**/dist/
+**/build/
+
 .env
-./dist
-./build
+.env.*
+!.env.example
+
+.vite/
+**/.vite/
